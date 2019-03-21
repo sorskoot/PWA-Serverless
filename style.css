@@ -1,0 +1,31 @@
+/* CSS files add styling rules to your content */
+
+body {
+  font-family: "Benton Sans", "Helvetica Neue", helvetica, arial, sans-serif;
+  margin: 2em;
+  background-color:#333;
+  color:#aaa;
+}
+.counter{
+  font-family: 'Orbitron', sans-serif;
+  color: #FF3333;
+  font-size: 20em;
+  
+    text-align: center;
+}
+
+h1 {
+  font-family: 'Orbitron', sans-serif;
+  font-style: italic;
+  color: #FF3333;
+  text-align: center;
+}
+
+#footer {
+  position:fixed;
+  left:0px;
+  bottom:0px;
+  height:30px;
+  width:100%;
+  background:#999;
+}
