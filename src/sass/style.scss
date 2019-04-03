@@ -1,23 +1,23 @@
 /* CSS files add styling rules to your content */
+@import 'variables';
 
 body {
-  font-family: "Benton Sans", "Helvetica Neue", helvetica, arial, sans-serif;
+  font-family: $font;
   margin: 2em;
   background-color:#333;
   color:#aaa;
 }
 .counter{
-  font-family: 'Orbitron', sans-serif;
-  color: #FF3333;
+  font-family: $fontScore;
+  color: $redcolor;
   font-size: 20em;
-  
     text-align: center;
 }
 
 h1 {
-  font-family: 'Orbitron', sans-serif;
+  font-family: $fontScore;
   font-style: italic;
-  color: #FF3333;
+  color: $redcolor;
   text-align: center;
 }
 

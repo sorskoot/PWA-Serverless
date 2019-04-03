@@ -1,2 +1,5 @@
 .vscode
 .node-modules
+.sass-cache
+node_modules
+dist

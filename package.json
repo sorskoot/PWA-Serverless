@@ -4,9 +4,17 @@
   "description": "",
   "main": "script.js",
   "scripts": {
+    "build": "pug ./src/pug/index.pug -o ./dist -P && sass ./src/sass/style.scss ./dist/style.css",
+    "pug": "pug ./src/pug/index.pug ./dist/index.html",
+    "sass": "sass ./src/sass/style.scss ./dist/style.css",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "pug": "2.0.3",
+    "pug-cli": "^1.0.0-alpha6",
+    "sass": "1.17.4"
+  }
 }
