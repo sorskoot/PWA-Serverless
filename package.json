@@ -5,12 +5,12 @@
   "main": "script.js",
   "scripts": {
     "start": "http-server ./dist -p 3900",
-    "build": "pug ./src/pug/index.pug -o ./dist -P && sass ./src/sass/style.scss ./dist/style.css",
-    "pug": "pug ./src/pug/index.pug ./dist/index.html",
-    "pug-watch": "pug -w ./src/pug/index.pug ./dist/index.html",
+    "build": "pug ./src/pug/index.pug ./src/pug/counter.pug -o ./dist -P && sass ./src/sass/style.scss ./dist/style.css",
+    "pug": "pug ./src/pug/index.pug ./src/pug/counter.pug -o ./dist -P",
+    "pug-watch": "pug -w ./src/pug/index.pug ./src/pug/counter.pug -o ./dist -P",
     "sass": "sass ./src/sass/style.scss ./dist/style.css",
     "sass-watch": "sass --watch ./src/sass/style.scss ./dist/style.css",
-    "watch": "pug -w ./src/pug/index.pug -o ./dist -P && sass --watch ./src/sass/style.scss ./dist/style.css",
+    "watch": "pug -w ./src/pug/index.pug ./src/pug/counter.pug -o ./dist -P && sass --watch ./src/sass/style.scss ./dist/style.css",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
