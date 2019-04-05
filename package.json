@@ -1,12 +1,16 @@
 {
-  "name": "Bluno",
+  "name": "pwa-serverless-demo",
   "version": "1.0.0",
   "description": "",
   "main": "script.js",
   "scripts": {
+    "start": "http-server ./dist -p 3900",
     "build": "pug ./src/pug/index.pug -o ./dist -P && sass ./src/sass/style.scss ./dist/style.css",
     "pug": "pug ./src/pug/index.pug ./dist/index.html",
+    "pug-watch": "pug -w ./src/pug/index.pug ./dist/index.html",
     "sass": "sass ./src/sass/style.scss ./dist/style.css",
+    "sass-watch": "sass --watch ./src/sass/style.scss ./dist/style.css",
+    "watch": "pug -w ./src/pug/index.pug -o ./dist -P && sass --watch ./src/sass/style.scss ./dist/style.css",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -15,6 +19,7 @@
   "devDependencies": {
     "pug": "2.0.3",
     "pug-cli": "^1.0.0-alpha6",
-    "sass": "1.17.4"
+    "sass": "1.17.4",
+    "http-server":"0.11.1"
   }
 }

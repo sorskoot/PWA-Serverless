@@ -1,20 +1,22 @@
-Must have:
+Todo:
+    
+    ☐ Overview page
+    ☐ Counting page 
+
     ☐ connect to the bluetooth
     ☐ Save scores to azure
     ☐ run offline
     ☐ sync background
-    ☐ over of old games
+    ☐ overview of old games
     ☐ start a new game
+
+    ☐ PWA
+        ☐ manifest.json
+            ☐ Icons
+        ☐ serviceworker.js
+
+    ✔ run locally @done(19-04-05 13:58)
     
-Should Have:
-    ☐ run locally
-    
-Could Have:
-
-Would like:
-
-Other:
-
 Archive:
 
 
