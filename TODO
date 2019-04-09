@@ -24,8 +24,9 @@ Todo:
         ✔ serviceworker.js @done(19-04-09 15:51)
 
     Build:
-        ☐ Have Webpack build Pug
-        ☐ Have Webpack build SCSS
+        ✘ Have Webpack build Pug @cancelled(19-04-09 16:28)
+        ✘ Have Webpack build SCSS @cancelled(19-04-09 16:28)
+        ✔ Build everyting using 1 build script @done(19-04-09 16:28)
 
 Archive:
   ✔ Add webpack for bundling scripts @done(19-04-05 15:20) @project(Todo)
