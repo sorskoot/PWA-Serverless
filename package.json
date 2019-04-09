@@ -6,7 +6,8 @@
   "scripts": {
     "start": "http-server ./dist -p 3900",
     "build-old": "pug ./src/pug/index.pug ./src/pug/counter.pug -o ./dist -P && sass ./src/sass/style.scss ./dist/style.css",
-    "build": "webpack --config webpack.dev --progress --colors",
+    "build":"npm run js && npm run pug && npm run sass",
+    "js": "webpack --config webpack.dev --progress --colors",
     "watch": "webpack --config webpack.dev --colors --watch",
     "pug": "pug ./src/pug/index.pug ./src/pug/counter.pug -o ./dist -P",
     "pug-watch": "pug -w ./src/pug/index.pug ./src/pug/counter.pug -o ./dist -P",
