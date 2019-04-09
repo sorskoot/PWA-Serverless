@@ -1,24 +1,30 @@
 Todo:
-    ☐ Update Readme.md
+    Styling:
+        ☐ Add styling for list
+        ☐ Add styling for 'buttons'
     
-    ☐ Overview page
-    ☐ Counting page 
+    Overview page:
+        ✔ Show last 10 games @done(19-04-09 14:39)
+        ✔ Start a new game --> navigates to Counting page @done(19-04-09 14:40)
+        
+    Counting page:
+        ☐ initiate new game
+        ☐ connect to the bluetooth
 
-    ☐ connect to the bluetooth
-    ☐ Save scores to azure
-    ☐ run offline
-    ☐ sync background
-    ☐ overview of old games
-    ☐ start a new game
+    functionality:
+        ☐ Save scores to azure
+        ☐ run offline
+        ☐ sync background
+        ☐ overview of old games
+        ☐ start a new game
 
-    ☐ PWA
+    PWA:
         ☐ manifest.json
             ☐ Icons
         ☐ serviceworker.js
 
-    ✔ run locally @done(19-04-05 13:58)
-    
-  
 Archive:
-
+  ✔ Add webpack for bundling scripts @done(19-04-05 15:20) @project(Todo)
+  ✔ Update Readme.md @done(19-04-05 14:23) @project(Todo)
+  ✔ run locally @done(19-04-05 13:58) @project(Todo)
 

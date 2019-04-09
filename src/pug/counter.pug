@@ -1,23 +1,13 @@
-doctype html
-html(lang="en")
-  include includes/head.pug
-  body
-    h1 ScoreCounter
+extend includes/layout.pug
+
+block content
+  h1 ScoreCounter
    
-    .counter
-      span#score 0
-    div game: 
-      span#game 0
-    div break: 
-      span#break 0
+  .counter
+    span#score 0
+  div game: 
+    span#game 0
+  div break: 
+    span#break 0
     
-    #output
-
-    #footer
-      button#btn-connect Connect
-      button#btn-disconnect Disconnect
-      button#btn-start start
-      button#btn-break break
-      button#btn-reset reset
-
-    script(src="script.js")
+  #output
