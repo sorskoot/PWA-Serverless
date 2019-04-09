@@ -19,9 +19,13 @@ Todo:
         ☐ start a new game
 
     PWA:
-        ☐ manifest.json
-            ☐ Icons
-        ☐ serviceworker.js
+        ✔ manifest.json @done(19-04-09 15:51)
+            ✔ Icons @done(19-04-09 15:51)
+        ✔ serviceworker.js @done(19-04-09 15:51)
+
+    Build:
+        ☐ Have Webpack build Pug
+        ☐ Have Webpack build SCSS
 
 Archive:
   ✔ Add webpack for bundling scripts @done(19-04-05 15:20) @project(Todo)
