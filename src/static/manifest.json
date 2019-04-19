@@ -3,7 +3,7 @@
     "name" : "ScoreCounter",
     "scope" : "/",
     "display" : "standalone",
-    "start_url" : "https://beetlebluno.z16.web.core.windows.net/",
+    "start_url" : "/",
     "short_name" : "ScoreCounter",
     "theme_color" : "#FF3333",
     "description" : "Count scores using an Bluetooth Arduino Device",

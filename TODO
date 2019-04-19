@@ -10,6 +10,7 @@ Todo:
     Counting page:
         ☐ initiate new game
         ☐ connect to the bluetooth
+        ☐ Backup to add score by hand
 
     functionality:
         ☐ Save scores to azure
