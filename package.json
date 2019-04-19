@@ -1,50 +1,87 @@
 {
-  "name": "pwa-serverless-demo",
-  "version": "1.0.0",
-  "description": "",
-  "main": "script.js",
+  "name": "scorecounter",
+  "version": "0.1.0",
+  "private": true,
   "scripts": {
-    "start": "http-server ./dist -p 3900",
-    "build-old": "pug ./src/pug/index.pug ./src/pug/counter.pug -o ./dist -P && sass ./src/sass/style.scss ./dist/style.css",
-    "build":"npm run js && npm run pug && npm run sass",
-    "js": "webpack --config webpack.dev --progress --colors",
-    "watch": "webpack --config webpack.dev --colors --watch",
-    "pug": "pug ./src/pug/index.pug ./src/pug/counter.pug -o ./dist -P",
-    "pug-watch": "pug -w ./src/pug/index.pug ./src/pug/counter.pug -o ./dist -P",
-    "sass": "sass ./src/sass/style.scss ./dist/style.css",
-    "sass-watch": "sass --watch ./src/sass/style.scss ./dist/style.css",
-    "watch-old": "pug -w ./src/pug/index.pug ./src/pug/counter.pug -o ./dist -P && sass --watch ./src/sass/style.scss ./dist/style.css",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "lint": "vue-cli-service lint",
+    "test:unit": "vue-cli-service test:unit"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "dependencies": {
+    "core-js": "^2.6.5",
+    "register-service-worker": "^1.6.2",
+    "vue": "^2.6.10"
+  },
   "devDependencies": {
-    "@babel/cli": "^7.4.3",
-    "@babel/core": "^7.4.3",
-    "@babel/preset-env": "^7.4.3",
-    "compression-webpack-plugin": "^2.0.0",
-    "copy-webpack-plugin": "^5.0.2",
-    "css-loader": "^2.1.1",
-    "envify": "^4.1.0",
+    "@vue/cli-plugin-babel": "^3.6.0",
+    "@vue/cli-plugin-eslint": "^3.6.0",
+    "@vue/cli-plugin-pwa": "^3.6.0",
+    "@vue/cli-plugin-unit-jest": "^3.6.3",
+    "@vue/cli-service": "^3.6.0",
+    "@vue/eslint-config-airbnb": "^4.0.0",
+    "@vue/test-utils": "1.0.0-beta.29",
+    "babel-core": "7.0.0-bridge.0",
+    "babel-eslint": "^10.0.1",
+    "babel-jest": "^23.6.0",
     "eslint": "^5.16.0",
-    "html-webpack-plugin": "^3.2.0",
-    "http-server": "0.11.1",
-    "jshint": "^2.10.2",
-    "jshint-loader": "^0.8.4",
-    "node-sass": "^4.11.0",
-    "pug": "2.0.3",
-    "pug-cli": "^1.0.0-alpha6",
-    "pug-loader": "^2.4.0",
-    "sass": "1.17.4",
+    "eslint-plugin-vue": "^5.0.0",
+    "node-sass": "^4.9.0",
     "sass-loader": "^7.1.0",
-    "style-loader": "^0.23.1",
-    "transform-loader": "^0.2.4",
-    "uglify-es": "^3.3.9",
-    "uglify-js-es6": "^2.8.9",
-    "uglifyes-webpack-plugin": "^0.4.3",
-    "webpack": "^4.29.6",
-    "webpack-cli": "^3.3.0",
-    "webpack-merge": "^4.2.1"
+    "vue-template-compiler": "^2.5.21"
+  },
+  "eslintConfig": {
+    "root": true,
+    "env": {
+      "node": true
+    },
+    "extends": [
+      "plugin:vue/essential",
+      "@vue/airbnb"
+    ],
+    "rules": {},
+    "parserOptions": {
+      "parser": "babel-eslint"
+    }
+  },
+  "postcss": {
+    "plugins": {
+      "autoprefixer": {}
+    }
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not ie <= 8"
+  ],
+  "jest": {
+    "moduleFileExtensions": [
+      "js",
+      "jsx",
+      "json",
+      "vue"
+    ],
+    "transform": {
+      "^.+\\.vue$": "vue-jest",
+      ".+\\.(css|styl|less|sass|scss|svg|png|jpg|ttf|woff|woff2)$": "jest-transform-stub",
+      "^.+\\.jsx?$": "babel-jest"
+    },
+    "transformIgnorePatterns": [
+      "/node_modules/"
+    ],
+    "moduleNameMapper": {
+      "^@/(.*)$": "<rootDir>/src/$1"
+    },
+    "snapshotSerializers": [
+      "jest-serializer-vue"
+    ],
+    "testMatch": [
+      "**/tests/unit/**/*.spec.(js|jsx|ts|tsx)|**/__tests__/*.(js|jsx|ts|tsx)"
+    ],
+    "testURL": "http://localhost/",
+    "watchPlugins": [
+      "jest-watch-typeahead/filename",
+      "jest-watch-typeahead/testname"
+    ]
   }
 }
