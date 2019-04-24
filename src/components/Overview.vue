@@ -1,13 +1,14 @@
-<template>
+<template>  
   <div class="hello">
-    <h3>{{ msg }}</h3>
+    <h1> ScoreCounter </h1>  
+    
 
     </div>
 </template>
 
 <script>
 export default {
-  name: "HelloWorld",
+  name: "overview",
   props: {
     msg: String
   }
