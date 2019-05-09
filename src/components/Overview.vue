@@ -2,10 +2,10 @@
   <div class="hello">
     <h1>ScoreCounter</h1>
     <ul id="example-1">
-      <li v-for="score in scores">
-        {{ score.date }}       
-        {{ score.name }}    
-        {{ score.score }}    
+      <li v-for="(score,index) in scores" :key="index">
+        {{ score.date }}
+        {{ score.name }}
+        {{ score.score }}
       </li>
     </ul>
   </div>
@@ -34,6 +34,5 @@ export default {
   h3 {
     margin: 40px 0 0;
   }
-  
 }
 </style>

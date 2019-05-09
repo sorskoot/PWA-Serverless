@@ -3,14 +3,14 @@ Todo:
         ☐ Add styling for list
         ☐ Add styling for 'buttons'
     
-    Overview page:
-        ✔ Show last 10 games @done(19-04-09 14:39)
-        ✔ Start a new game --> navigates to Counting page @done(19-04-09 14:40)
-        
     Counting page:
+        ☐ create Counting.vue @today 
         ☐ initiate new game
-        ☐ connect to the bluetooth
+        ☐ connect to the bluetooth @today
         ☐ Backup to add score by hand
+    
+    Overview page:
+        ☐ navigate to the counting page @today 
 
     functionality:
         ☐ Save scores to azure
@@ -18,18 +18,20 @@ Todo:
         ☐ sync background
         ☐ overview of old games
         ☐ start a new game
-
-    PWA:
-        ✔ manifest.json @done(19-04-09 15:51)
-            ✔ Icons @done(19-04-09 15:51)
-        ✔ serviceworker.js @done(19-04-09 15:51)
-
-    Build:
-        ✘ Have Webpack build Pug @cancelled(19-04-09 16:28)
-        ✘ Have Webpack build SCSS @cancelled(19-04-09 16:28)
-        ✔ Build everyting using 1 build script @done(19-04-09 16:28)
+    
+    Arduino:
+        ☐ Get bluetooth communication working @today
+        ☐ Finish ardiono code
 
 Archive:
+  ✔ Show last 10 games @done(19-04-09 14:39) @project(Todo.Overview page)
+  ✔ Start a new game --> navigates to Counting page @done(19-04-09 14:40) @project(Todo.Overview page)
+  ✔ manifest.json @done(19-04-09 15:51) @project(Todo.PWA)
+  ✔ Icons @done(19-04-09 15:51) @project(Todo.PWA)
+  ✔ serviceworker.js @done(19-04-09 15:51) @project(Todo.PWA)
+  ✘ Have Webpack build Pug @cancelled(19-04-09 16:28) @project(Todo.Build)
+  ✘ Have Webpack build SCSS @cancelled(19-04-09 16:28) @project(Todo.Build)
+  ✔ Build everyting using 1 build script @done(19-04-09 16:28) @project(Todo.Build)
   ✔ Add webpack for bundling scripts @done(19-04-05 15:20) @project(Todo)
   ✔ Update Readme.md @done(19-04-05 14:23) @project(Todo)
   ✔ run locally @done(19-04-05 13:58) @project(Todo)
