@@ -4,7 +4,7 @@ Todo:
         ☐ Add styling for 'buttons'
     
     Counting page:
-        ☐ create Counting.vue @today 
+        ✔ create Counting.vue @today @done(19-05-09 21:52)
         ☐ initiate new game
         ☐ connect to the bluetooth @today
         ☐ Backup to add score by hand
