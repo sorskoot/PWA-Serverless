@@ -6,8 +6,14 @@ Todo:
     Counting page:
         ✔ create Counting.vue @today @done(19-05-09 21:52)
         ☐ initiate new game
+        ☐ handle running game
+        ☐ pause/resume a game
+        ☐ end game
+        ☐ keep track of the scores
+        ☐ send scores to Azure
         ☐ connect to the bluetooth @today
         ☐ Backup to add score by hand
+
     
     Overview page:
         ☐ navigate to the counting page @today 

@@ -4,3 +4,34 @@ $font: "Benton Sans", "Helvetica Neue", helvetica, arial, sans-serif;
 $redcolor: #FF3333;
 $backgroundcolor: #333;
 $textcolor: #DDD;
+
+$dark: #2B2B2B;
+$dark-grey: #3A3A3A;
+$light-grey:#7E7E7E;
+$light: #ffffff;
+
+$accent: #FF7E4A;
+$accent-lighter: lighten( $accent, 10% );
+$accent-darker: darken( $accent, 10% );
+$accent-disabled: darken(desaturate( $accent, 50% ), 20%);
+
+$danger: #FF4A4A;
+$danger-lighter: lighten( $danger, 10% );
+$danger-darker: darken( $danger, 10% );
+$danger-disabled: darken(desaturate( $danger, 25% ), 20%);
+
+$success: #27CC54;
+$success-lighter: lighten( $success, 10% );
+$success-darker: darken( $success, 10% );
+$success-disabled: darken(desaturate( $success, 25% ), 20%);
+
+$ease-speed: 75ms;
+$ease-curve: cubic-bezier(1.000, 0.000, 1.000, 1.000);
+$ease: all $ease-speed $ease-curve;
+$ease-color: color $ease-speed $ease-curve;
+
+%text {
+    font-family: $font;
+    font-size: 1em;
+    font-weight: 300;
+}
