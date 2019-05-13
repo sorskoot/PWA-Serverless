@@ -30,8 +30,11 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
+@import "../scss/variables.scss";
+
 .hello {
-  h3 {
+  h1 {
+    color:$redcolor;
     margin: 40px 0 0;
   }
 }

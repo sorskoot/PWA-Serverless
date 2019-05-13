@@ -99,8 +99,8 @@ int sensorState = 0, lastState=0;
 void loop(void)
 {
   delay(100);
-  
-  if (Serial.available())
+
+  if (Serial.available() > 0)
   {
     setColorOnOff(0,0,255,50);
   }

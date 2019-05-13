@@ -3,21 +3,22 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "serve": "vue-cli-service serve  --https",
+    "serve": "vue-cli-service serve",
+    "start-https": "vue-cli-service build --mode development && http-server ./dist -p 443 -c-1 -S -C ./c0dr_nl.pem -K ./c0dr_nl.key",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
     "test:unit": "vue-cli-service test:unit"
   },
   "dependencies": {
     "core-js": "^2.6.5",
+    "moment": "^2.24.0",
     "register-service-worker": "^1.6.2",
-    "vue": "^2.6.10",
-    "moment": "^2.24.0"
+    "vue": "^2.6.10"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^3.6.0",
     "@vue/cli-plugin-eslint": "^3.6.0",
-    "@vue/cli-plugin-pwa": "^3.6.0",
+    "@vue/cli-plugin-pwa": "^3.7.0",
     "@vue/cli-plugin-unit-jest": "^3.6.3",
     "@vue/cli-service": "^3.6.0",
     "@vue/eslint-config-airbnb": "^4.0.0",
@@ -29,8 +30,8 @@
     "eslint-plugin-vue": "^5.0.0",
     "node-sass": "^4.9.0",
     "sass-loader": "^7.1.0",
-    "vue-template-compiler": "^2.5.21",
     "vue-router": "^3.0.6",
+    "vue-template-compiler": "^2.5.21",
     "vuex": "^3.1.0"
   },
   "eslintConfig": {

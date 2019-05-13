@@ -2,34 +2,35 @@ Todo:
     Styling:
         ☐ Add styling for list
         ☐ Add styling for 'buttons'
-    
+        ☐ Add images to manifest
+
     Counting page:
-        ✔ create Counting.vue @today @done(19-05-09 21:52)
         ☐ initiate new game
         ☐ handle running game
         ☐ pause/resume a game
         ☐ end game
         ☐ keep track of the scores
         ☐ send scores to Azure
-        ☐ connect to the bluetooth @today
         ☐ Backup to add score by hand
 
-    
     Overview page:
-        ☐ navigate to the counting page @today 
+        ☐ navigate to the counting page  
 
     functionality:
+        ✔ Get service worker to work @today @done(19-05-13 23:42)
         ☐ Save scores to azure
         ☐ run offline
-        ☐ sync background
+        ☐ sync background @today
         ☐ overview of old games
         ☐ start a new game
     
     Arduino:
-        ☐ Get bluetooth communication working @today
+        ☐ Get bluetooth communication working
         ☐ Finish ardiono code
 
 Archive:
+  ✔ create Counting.vue @done(19-05-09 21:52) @project(Todo.Counting page)
+  ✔ connect to the bluetooth @done(19-05-13 22:16) @project(Todo.Counting page)
   ✔ Show last 10 games @done(19-04-09 14:39) @project(Todo.Overview page)
   ✔ Start a new game --> navigates to Counting page @done(19-04-09 14:40) @project(Todo.Overview page)
   ✔ manifest.json @done(19-04-09 15:51) @project(Todo.PWA)
