@@ -16,6 +16,7 @@
 <script>
 import psButton from "./atoms/button";
 import { bluetoothService } from "../services";
+import { scoreService } from "../services";
 
 export default {
   name: "counter",
@@ -35,9 +36,11 @@ export default {
     },
     minus(){
       this.score--;
+      scoreService.postScore({score:this.score, name:"Just a Name"}).then(e=>console.log(e));
     },
     plus(){
       this.score++;
+      scoreService.postScore({score:this.score, name:"Just a Name"}).then(e=>console.log(e));
     }
   }
 };
