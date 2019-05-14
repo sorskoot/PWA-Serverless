@@ -1,43 +1,38 @@
-// if (workbox) {
-//   console.log(`Yay! Workbox is loaded 🎉`);
-// } else {
-//   console.log(`Boo! Workbox didn't load 😬`);
-// }
-
 const CACHE = 'PWA-Serverless-cache';
+
+const precacheCustom =['https://fonts.googleapis.com/css?family=Orbitron'];
 
 self.addEventListener('install', function(evt) {
   console.log('The service worker is being installed.');
-  
   evt.waitUntil(precache());
 });
 
+self.addEventListener('fetch', function(event) {
+  if (event.request.method !== "GET") return;
 
-self.addEventListener('fetch', function(evt) {
-  console.log('The service worker is serving the asset.');
-  evt.respondWith(fromNetwork(evt.request, 400).catch(function () {
-    return fromCache(evt.request);
-  }));
+  event.respondWith(
+    fetch(event.request,{mode: 'cors'})
+      .then(function (response) {
+        
+        // If request was success, add or update it in the cache
+        event.waitUntil(updateCache(event.request, response.clone()));
+
+        return response;
+      })
+      .catch(function (error) {
+        console.log("Network request Failed. Serving content from cache: " + error);
+        return fromCache(event.request);
+      })
+  );
 });
 
 function precache() {
   return caches.open(CACHE).then(function (cache) {
-    return cache.addAll( __precacheManifest.map(pm=>pm.url) );
+    return cache.addAll( __precacheManifest.map(pm=>pm.url).concat(precacheCustom) );
   });
 }
 
-function fromNetwork(request, timeout) {
-  return new Promise(function (resolve, reject) {
-    var timeoutId = setTimeout(reject, timeout);
-    fetch(request,{mode: 'cors'}).then(function (response) {
-      clearTimeout(timeoutId);
-      addToCache(request,response)
-        .then((cachedResponse)=>resolve(cachedResponse));
-    }, reject);
-  });
-}
-
-function addToCache(request,response) {
+function updateCache(request, response) {
   return caches.open(CACHE).then(function (cache) {
     return cache.put(request, response);
   });
@@ -45,9 +40,16 @@ function addToCache(request,response) {
 
 
 function fromCache(request) {
+  // Check to see if you have it in the cache
+  // Return response
+  // If not in the cache, then return error page
   return caches.open(CACHE).then(function (cache) {
     return cache.match(request).then(function (matching) {
-      return matching || Promise.reject('no-match');
+      if (!matching || matching.status === 404) {
+        return Promise.reject("no-match");
+      }
+
+      return matching;
     });
   });
 }

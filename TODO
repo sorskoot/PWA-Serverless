@@ -2,7 +2,7 @@ Todo:
     Styling:
         ☐ Add styling for list
         ☐ Add styling for 'buttons'
-        ☐ Add images to manifest
+        ✔ Add images to manifest @done(19-05-14 15:43)
 
     Counting page:
         ☐ initiate new game
@@ -17,12 +17,13 @@ Todo:
         ☐ navigate to the counting page  
 
     functionality:
-        ✔ Get service worker to work @today @done(19-05-13 23:42)
+        ✔ Get service worker to work @done(19-05-13 23:42)
         ☐ Save scores to azure
-        ☐ run offline
+        ✔ run offline @done(19-05-14 15:42)
         ☐ sync background @today
         ☐ overview of old games
         ☐ start a new game
+        ☐ More data --> Send {matchId, date, name, score, partitionkey}
     
     Arduino:
         ☐ Get bluetooth communication working
