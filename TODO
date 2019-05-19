@@ -1,7 +1,7 @@
 Todo:
     Styling:
-        ☐ Add styling for list
-        ☐ Add styling for 'buttons'
+        ☐ Add styling for list @critical 
+        ✔ Add styling for 'buttons' @done(19-05-19 20:31)
         ✔ Add images to manifest @done(19-05-14 15:43)
 
     Counting page:
@@ -10,23 +10,25 @@ Todo:
         ☐ pause/resume a game
         ☐ end game
         ☐ keep track of the scores
-        ☐ send scores to Azure
-        ☐ Backup to add score by hand
+        ✔ send scores to Azure @done(19-05-19 20:32)
+        ✔ Backup to add score by hand @done(19-05-19 20:32)
 
     Overview page:
-        ☐ navigate to the counting page  
+        ✔ navigate to the counting page @done(19-05-19 23:56)
 
     functionality:
         ✔ Get service worker to work @done(19-05-13 23:42)
         ☐ Save scores to azure
         ✔ run offline @done(19-05-14 15:42)
-        ☐ sync background @today
+        ☐ sync background @critical
         ☐ overview of old games
         ☐ start a new game
         ☐ More data --> Send {matchId, date, name, score, partitionkey}
     
     Arduino:
-        ☐ Get bluetooth communication working
+        ☐ Get bluetooth communication working @critical
+            At least the counting should work, sending a message from arduino
+            to the website
         ☐ Finish ardiono code
 
 Archive:

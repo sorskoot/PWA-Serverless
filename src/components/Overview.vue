@@ -8,12 +8,18 @@
         {{ score.score }}
       </li>
     </ul>
+    <router-link to="/counter">
+      <ps-button>New Game</ps-button>
+    </router-link>
   </div>
 </template>
 
 <script>
+import psButton from "./atoms/button";
+
 export default {
   name: "overview",
+  components: { psButton },
   props: {
     msg: String
   },
@@ -24,6 +30,9 @@ export default {
     scores() {
       return this.$store.state.scores.scores;
     }
+  },
+  methods: {
+    newGame() {}
   }
 };
 </script>
@@ -34,7 +43,7 @@ export default {
 
 .hello {
   h1 {
-    color:$redcolor;
+    color: $redcolor;
     margin: 40px 0 0;
   }
 }

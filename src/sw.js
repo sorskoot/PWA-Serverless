@@ -53,3 +53,14 @@ function fromCache(request) {
     });
   });
 }
+
+self.addEventListener('sync', function(event) {
+    if (event.tag == 'myFirstSync') {
+      event.waitUntil(doSomeStuff());
+    }
+  });
+
+  function doSomeStuff(){
+        console.log('doSomeStuff, link syncing 😀');
+        console.log(indexedDB);
+  }
