@@ -29,7 +29,11 @@ export default {
   },
   methods: {
     connect() {
-      bluetoothService.connect();
+      bluetoothService.connect().then(e =>{
+          e.onScore = () => {
+              this.plus();
+          }
+      });
     },
     test() {
       bluetoothService.send("A");

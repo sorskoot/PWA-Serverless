@@ -17,6 +17,10 @@ const notifyUUID = '6e400003-b5a3-f393-e0a9-e50e24dcca9e';
 const custom = '6e40001F-b5a3-f393-e0a9-e50e24dcca9e';
 //6e400003-b5a3-f393-e0a9-e50e24dcca9e';
 
+const internalConnection ={
+    onScore: function(){}
+}
+
 let myChar, myDevice, interval, myService;
 
 let outputChar;
@@ -48,7 +52,7 @@ async function connect() {
     await characteristic.addEventListener('characteristicvaluechanged',
       handleCharacteristicValueChanged);
     console.log('Device connected, listening for events...');
-
+    return internalConnection;
   } catch (err) {
     console.log(err.message);
   }
@@ -99,7 +103,7 @@ function send(message) {
 }
 
 function handleCharacteristicValueChanged(value) {
- alert(textDecoder.decode(value.target.value));
+    internalConnection.onScore();
 }
 
 function delay(time) {

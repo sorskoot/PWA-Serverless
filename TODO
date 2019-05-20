@@ -17,7 +17,7 @@ Todo:
         ✔ More data --> Send {matchId, date, name, score, partitionkey} @critical @done(19-05-21 00:11)
 
     Arduino:
-        ☐ Get bluetooth communication working @high
+        ✔ Get bluetooth communication working @high @done(19-05-21 00:57)
             At least the counting should work, sending a message from arduino
             to the website
         ☐ Finish ardiono code
