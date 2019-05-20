@@ -41,6 +41,8 @@ export default {
     plus(){
       this.score++;
       scoreService.postScore({score:this.score, name:"Just a Name"}).then(e=>console.log(e));
+      var event = new Event('save');
+      document.body.dispatchEvent(event);
     }
   }
 };

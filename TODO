@@ -1,8 +1,6 @@
 Todo:
     Styling:
-        ☐ Add styling for list @critical 
-        ✔ Add styling for 'buttons' @done(19-05-19 20:31)
-        ✔ Add images to manifest @done(19-05-14 15:43)
+        ☐ Add styling for list @high
 
     Counting page:
         ☐ initiate new game
@@ -10,28 +8,28 @@ Todo:
         ☐ pause/resume a game
         ☐ end game
         ☐ keep track of the scores
-        ✔ send scores to Azure @done(19-05-19 20:32)
-        ✔ Backup to add score by hand @done(19-05-19 20:32)
-
-    Overview page:
-        ✔ navigate to the counting page @done(19-05-19 23:56)
 
     functionality:
-        ✔ Get service worker to work @done(19-05-13 23:42)
-        ☐ Save scores to azure
-        ✔ run offline @done(19-05-14 15:42)
-        ☐ sync background @critical
+        ☐ Save scores to azure @critical
+        ✔ sync background @done(19-05-20 21:50)
         ☐ overview of old games
         ☐ start a new game
-        ☐ More data --> Send {matchId, date, name, score, partitionkey}
-    
+        ☐ More data --> Send {matchId, date, name, score, partitionkey} @critical 
+
     Arduino:
-        ☐ Get bluetooth communication working @critical
+        ☐ Get bluetooth communication working @high
             At least the counting should work, sending a message from arduino
             to the website
         ☐ Finish ardiono code
 
 Archive:
+  ✔ Add styling for 'buttons' @done(19-05-19 20:31) @project(Todo.Styling)
+  ✔ Add images to manifest @done(19-05-14 15:43) @project(Todo.Styling)
+  ✔ send scores to Azure @done(19-05-19 20:32) @project(Todo.Counting page)
+  ✔ Backup to add score by hand @done(19-05-19 20:32) @project(Todo.Counting page)
+  ✔ navigate to the counting page @done(19-05-19 23:56) @project(Todo.Overview page)
+  ✔ Get service worker to work @done(19-05-13 23:42) @project(Todo.functionality)
+  ✔ run offline @done(19-05-14 15:42) @project(Todo.functionality)
   ✔ create Counting.vue @done(19-05-09 21:52) @project(Todo.Counting page)
   ✔ connect to the bluetooth @done(19-05-13 22:16) @project(Todo.Counting page)
   ✔ Show last 10 games @done(19-04-09 14:39) @project(Todo.Overview page)
