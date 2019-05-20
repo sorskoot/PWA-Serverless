@@ -10,11 +10,11 @@ Todo:
         ☐ keep track of the scores
 
     functionality:
-        ☐ Save scores to azure @critical
+        ✔ Save scores to azure @critical @done(19-05-21 00:11)
         ✔ sync background @done(19-05-20 21:50)
         ☐ overview of old games
         ☐ start a new game
-        ☐ More data --> Send {matchId, date, name, score, partitionkey} @critical 
+        ✔ More data --> Send {matchId, date, name, score, partitionkey} @critical @done(19-05-21 00:11)
 
     Arduino:
         ☐ Get bluetooth communication working @high

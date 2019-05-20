@@ -34,15 +34,21 @@ export default {
     test() {
       bluetoothService.send("A");
     },
-    minus(){
+    minus() {
       this.score--;
-      scoreService.postScore({score:this.score, name:"Just a Name"}).then(e=>console.log(e));
+      scoreService
+        .postScore({
+          "total-score": this.score,
+          score: -1,
+          name: "Just a Name"
+        })
+        .then(e => console.log(e));
     },
-    plus(){
+    plus() {
       this.score++;
-      scoreService.postScore({score:this.score, name:"Just a Name"}).then(e=>console.log(e));
-      var event = new Event('save');
-      document.body.dispatchEvent(event);
+      scoreService
+        .postScore({ "total-score": this.score, score: 1, name: "Just a Name" })
+        .then(e => console.log(e));
     }
   }
 };

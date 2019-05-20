@@ -1,21 +1,50 @@
+
 const CACHE = 'PWA-Serverless-cache';
 const precacheCustom = ['https://fonts.googleapis.com/css?family=Orbitron'];
 
+const AzureURL = //'https://fa-d-progressive-01.azurewebsites.net/runtime/webhooks/durabletask/instances/6cac581543eb49ca8da9e708322c447d/raiseEvent/{eventName}?taskHub=DurableFunctionsHub&connection=Storage&code=ab7VivCvLteGmO7zgkK93ZHLH0oARrtt/YGwOpCCmWl6o7auDwQamg==';
+'https://pwaserverless.azurewebsites.net/api/GetScores';
 
-// self.importScripts('vendor/idb.js')
+self.importScripts('vendor/idb.js')
 
-// const scoresDb = idb.openDB('ScoreHistory');
+const scoresDb = idb.openDB('ScoreHistory');
  
-// function getLocalRecords() {
-//     return scoresDb.then(db => 
-//         db.transaction('scoreFiles')
-//           .objectStore('scoreFiles')
-//           .getAll());
-//   }
+function getLocalRecords() {
+    return scoresDb.then(db => 
+        db.transaction('scoreFiles')
+          .objectStore('scoreFiles')
+          .getAll());
+  }
+function clearStorage(){
+    return scoresDb.then(db => 
+        db.transaction('scoreFiles', 'readwrite')
+          .objectStore('scoreFiles')
+          .clear());
+}
 
-//   function persistLocalChanges() {
-//     return getLocalRecords().then(x=>console.log(x))
-// };
+ function persistLocalChanges() {
+    console.log('persistLocalChanges, link syncing 😀');
+    return getLocalRecords().then(records =>{
+        return fetch(AzureURL, {
+            method: 'POST',
+            body: JSON.stringify({ 
+              scores: records
+            }),
+            headers: {
+              'Content-Type': 'application/json',
+              'Access-Control-Allow-Origin':'*'
+            },
+            mode: 'cors',
+        }).then( () =>{
+            return clearStorage();
+        }).then(()=>{
+            self.registration.showNotification('Latest scores send to Azure. 🐱‍👤',{ });
+        })
+        .catch(err=>{
+            console.log(err.message, '😒');
+        })
+    })
+};
 
 
 self.addEventListener('install', function (evt) {
@@ -71,12 +100,8 @@ function fromCache(request) {
 }
 
 self.addEventListener('sync', function (event) {
-    if (event.tag == 'myFirstSync') {
-        event.waitUntil(doSomeStuff());
+    if (event.tag == 'syncToAzure') {
+        event.waitUntil(persistLocalChanges());
     }
 });
 
-function doSomeStuff() {
-    console.log('doSomeStuff, link syncing 😀');
-    console.log(indexedDB);
-}

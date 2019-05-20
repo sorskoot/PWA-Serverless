@@ -1,6 +1,9 @@
 navigator.serviceWorker.register('/sw.js');
 
-navigator.serviceWorker.ready.then(function(swRegistration) {
-    return swRegistration.sync.register('myFirstSync');
-  });
+Notification.requestPermission();
 
+navigator.serviceWorker.ready.then(function (swRegistration) {
+    document.body.addEventListener('saveData', () => {
+        return swRegistration.sync.register('syncToAzure');
+    })
+});
