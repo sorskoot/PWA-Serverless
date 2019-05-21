@@ -1,7 +1,51 @@
+PREP:
+    ☐ Fix URLs to the right Azure instance.
+        ☐ in score.service.js
+        ☐ in sw.js
+   
+    make sure code is commented:
+        ☐ score.service.js
+        ☐ sw.js
+        ☐ registerServiceWorker.js
+        ☐ Update/refresh serviceworker
+
 Demo outline:
+    - Intro             1 min
+        - PWA for scoring like basketball or korfball
+        - Using bluetooth for scoring
+        - Connect bluetooth
+        
+    - Show failing      1 min
+        - Show network tab
+        - Add a few score
+        - Go offline
+        - Show error
+        - Go online
+        - No Error
+        - explain missing requests
 
-    PWA:
+    - Show not failing  4 min
+        - uncomment in:
+            - score.service.js
+                Explain: Store in IndexedDB, send event
+            - registerServiceWorker.js
+                Explain: Handle event, sync to azure
+            - sw.js
+                Explain: Handle sync, send to azure, clear db
+        - run again
+        - update service worker
+        - network tab
+        - go offline
+        - show indexeddb
+        - go online
+        - show request
 
-    Bluetooth:
+    - Deploy             1 min
+        - build
+        - deploy to Azure
 
-    
+
+    PWA
+    Bluetooth
+    - make bluetooth connection
+    - see score update

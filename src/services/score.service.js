@@ -29,29 +29,35 @@ function getList() {
 }
 
 function postScore(score) {
-    score.matchId = 1;
-    score.createdAt = new Date();
-    score.date = '05-20-2019';
-    score.partitionkey = `${score.matchId}-${score.name}-${score.date}`;
+    return StoreInDB(score);
+    //return SendToAzure(score);
+}
 
+function SendToAzure(score) {
+    return fetch(URL, {
+        method: "POST",
+        mode: 'cors',
+        headers: {
+            'Access-Control-Allow-Origin': '*',
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(score)
+    })
+        .then(response => {
+            return response.json();
+        });
+}
+
+function StoreInDB(score) {
+    score.matchId = '264';
+    score.date = '05-20-2019';
+    score.partitionKey = `demo`;
     return scoreDb.then(db => {
         const transaction = db.transaction('scoreFiles', 'readwrite');
         transaction.objectStore('scoreFiles').put(score);
         return transaction.complete;
-    }).then(()=>{
+    }).then(() => {
         let event = new Event('saveData');
         document.body.dispatchEvent(event);
-    })
-    //   return fetch(URL,{
-    //       method:"POST",
-    //       mode: 'cors',
-    //       headers: {
-    //         'Access-Control-Allow-Origin':'*',
-    //         'Content-Type':'application/json'
-    //       },
-    //       body: JSON.stringify(score)
-    //     })
-    //   .then(response=>{
-    //       return response.json();
-    //   });
+    });
 }
