@@ -5,8 +5,9 @@ export const scoreService = {
     postScore
 };
 
-const URL = 'https://fa-d-progressive-01.azurewebsites.net/api/SaveNoSQLFunction_HttpStart?code=SYMEa4nAOnjS6wfQBu9Zj74YJwQyn5b5g1auhHMEgfXFfMbZ9RRdgQ==';
-//'https://pwaserverless.azurewebsites.net/api/GetScores';
+const URL = 
+'https://dotnetconf-pwa-serverless.azurewebsites.net/api/Score';
+
 
 const scoreDb = openDB('ScoreHistory', 10,
     {
