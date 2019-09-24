@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "start": "vue-cli-service serve --mode production",
     "serve": "vue-cli-service serve --mode production",
     "start-https": "vue-cli-service build --mode development && http-server ./dist -p 443 -c-1 -S -C ./c0dr_nl.pem -K ./c0dr_nl.key",
     "build": "vue-cli-service build",
