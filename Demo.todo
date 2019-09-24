@@ -1,13 +1,13 @@
 PREP:
-    ✔ Fix URLs to the right Azure instance. @done(19-05-21 12:11)
-        ✔ in score.service.js @done(19-05-21 12:11)
-        ✔ in sw.js @done(19-05-21 12:11)
-    ✔ Deploy to Azure @done(19-05-21 12:11)
+    ☐ Fix URLs to the right Azure instance.
+        ☐ in score.service.js
+        ☐ in sw.js
+    ☐ Deploy to Azure
    
     make sure code is commented:
-        ✔ score.service.js @done(19-05-21 12:12)
-        ✔ sw.js @done(19-05-21 12:12)
-        ✔ registerServiceWorker.js @done(19-05-21 12:12)
+        ☐ score.service.js
+        ☐ sw.js
+        ☐ registerServiceWorker.js
         ☐ Update/refresh serviceworker
 
 Demo outline:

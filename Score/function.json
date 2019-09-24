@@ -1,0 +1,35 @@
+{
+  "bindings": [
+    {
+      "authLevel": "anonymous",
+      "type": "httpTrigger",
+      "direction": "in",
+      "name": "req",
+      "methods": [
+        "get",
+        "post"
+      ]
+    },
+    {
+      "type": "http",
+      "direction": "out",
+      "name": "res"
+    },
+    {
+      "type": "table",
+      "direction": "in",
+      "name": "inputTable",
+      "tableName": "Scores",
+      "take": "500",
+      "connection": "dotnetconfpwaserverless_STORAGE"
+    },
+    {
+      "type": "table",
+      "direction": "out",
+      "partitionKey": "scores",
+      "name": "outputTable",
+      "tableName": "Scores",
+      "connection": "dotnetconfpwaserverless_STORAGE"
+    }
+  ]
+}
