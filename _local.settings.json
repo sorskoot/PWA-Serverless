@@ -1,7 +1,0 @@
-{
-  "IsEncrypted": false,
-  "Values": {
-    "FUNCTIONS_WORKER_RUNTIME": "node",
-    "pwaserverless_STORAGE":"DefaultEndpointsProtocol=https;AccountName=pwaserverless;AccountKey=quPEuHwqj8FJMF7eAKApz4tCaZEiAfHnKRsjWP+su4i93cQV7a9QZlJKbsILarba1ynApkPKrk3s/5L0EBK7HA==;"
-  }
-}
