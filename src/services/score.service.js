@@ -5,7 +5,8 @@ export const scoreService = {
     postScore
 };
 
-const URL = 'https://pwaserverless.azurewebsites.net/api/GetScores';
+const URL = 'https://fa-d-progressive-01.azurewebsites.net/api/SaveNoSQLFunction_HttpStart?code=SYMEa4nAOnjS6wfQBu9Zj74YJwQyn5b5g1auhHMEgfXFfMbZ9RRdgQ==';
+//'https://pwaserverless.azurewebsites.net/api/GetScores';
 
 const scoreDb = openDB('ScoreHistory', 10,
     {
@@ -29,8 +30,8 @@ function getList() {
 }
 
 function postScore(score) {
-    return StoreInDB(score);
-    //return SendToAzure(score);
+    //return StoreInDB(score);
+    return SendToAzure(score);
 }
 
 function SendToAzure(score) {
@@ -41,7 +42,7 @@ function SendToAzure(score) {
             'Access-Control-Allow-Origin': '*',
             'Content-Type': 'application/json'
         },
-        body: JSON.stringify(score)
+        body: JSON.stringify([score])
     })
         .then(response => {
             return response.json();
@@ -52,6 +53,7 @@ function StoreInDB(score) {
     score.matchId = '264';
     score.date = '05-20-2019';
     score.partitionKey = `demo`;
+    score.createdAt = `${new Date()}`;
     return scoreDb.then(db => {
         const transaction = db.transaction('scoreFiles', 'readwrite');
         transaction.objectStore('scoreFiles').put(score);

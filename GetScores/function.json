@@ -14,6 +14,25 @@
       "type": "http",
       "direction": "out",
       "name": "res"
-    }
+    },
+    {
+        "type": "table",
+        "name": "outTable",
+        "tableName": "PWAServerless",
+        "partitionKey": "functions",
+        "rowKey": "{rand-guid}",
+        "connection": "pwaserverless_STORAGE",
+        "direction": "out"
+      },
+      {
+        "type": "table",
+        "name": "inputTable",
+        "tableName": "PWAServerless",
+        "take": "1000",
+        "connection": "pwaserverless_STORAGE",
+        "direction": "in"
+      }
+    
   ]
+  
 }

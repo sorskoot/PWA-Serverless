@@ -2,8 +2,8 @@
 const CACHE = 'PWA-Serverless-cache';
 const precacheCustom = ['https://fonts.googleapis.com/css?family=Orbitron'];
 
-const AzureURL = 
-'https://pwaserverless.azurewebsites.net/api/GetScores';
+const AzureURL = 'https://fa-d-progressive-01.azurewebsites.net/api/SaveNoSQLFunction_HttpStart?code=SYMEa4nAOnjS6wfQBu9Zj74YJwQyn5b5g1auhHMEgfXFfMbZ9RRdgQ==';
+//'https://pwaserverless.azurewebsites.net/api/GetScores';
 
 self.importScripts('vendor/idb.js')
 
@@ -27,9 +27,7 @@ function clearStorage(){
     return getLocalRecords().then(records =>{
         return fetch(AzureURL, {
             method: 'POST',
-            body: JSON.stringify({ 
-              scores: records
-            }),
+            body: JSON.stringify(records),
             headers: {
               'Content-Type': 'application/json',
               'Access-Control-Allow-Origin':'*'
@@ -104,3 +102,4 @@ self.addEventListener('sync', function (event) {
     }
 });
 
+ 

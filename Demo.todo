@@ -1,12 +1,13 @@
 PREP:
-    ☐ Fix URLs to the right Azure instance.
-        ☐ in score.service.js
-        ☐ in sw.js
+    ✔ Fix URLs to the right Azure instance. @done(19-05-21 12:11)
+        ✔ in score.service.js @done(19-05-21 12:11)
+        ✔ in sw.js @done(19-05-21 12:11)
+    ✔ Deploy to Azure @done(19-05-21 12:11)
    
     make sure code is commented:
-        ☐ score.service.js
-        ☐ sw.js
-        ☐ registerServiceWorker.js
+        ✔ score.service.js @done(19-05-21 12:12)
+        ✔ sw.js @done(19-05-21 12:12)
+        ✔ registerServiceWorker.js @done(19-05-21 12:12)
         ☐ Update/refresh serviceworker
 
 Demo outline:
@@ -43,9 +44,3 @@ Demo outline:
     - Deploy             1 min
         - build
         - deploy to Azure
-
-
-    PWA
-    Bluetooth
-    - make bluetooth connection
-    - see score update

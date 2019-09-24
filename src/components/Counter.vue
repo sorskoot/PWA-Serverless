@@ -8,7 +8,7 @@
     </div>
     <div>
       <ps-button v-on:click="connect">{{isConnected?"Disconnect":"Connect"}}</ps-button>
-      <ps-button v-on:click="test">Test</ps-button>
+      <!-- <ps-button v-on:click="test">Test</ps-button> -->
     </div>
   </div>
 </template>
@@ -24,7 +24,7 @@ export default {
   data() {
     return {
       isConnected: false,
-      score: 15
+      score: 0
     };
   },
   methods: {
@@ -51,7 +51,7 @@ export default {
     plus() {
       this.score++;
       scoreService
-        .postScore({ "total-score": this.score, score: 1, name: "Just a Name" })
+        .postScore({ 'totalScore': `${this.score}`, score: `1`, name: "Techorama" })
         .then(e => console.log(e));
     }
   }

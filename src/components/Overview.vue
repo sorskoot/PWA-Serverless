@@ -24,11 +24,11 @@ export default {
     msg: String
   },
   created() {
-    this.$store.dispatch("getScores");
+   // this.$store.dispatch("getScores");
   },
   computed: {
     scores() {
-      return this.$store.state.scores.scores;
+    //  return this.$store.state.scores.scores;
     }
   },
   methods: {

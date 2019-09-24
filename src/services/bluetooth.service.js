@@ -28,7 +28,10 @@ let outputChar;
 async function connect() {
   try {
     let options = {
-      acceptAllDevices: true,
+      //acceptAllDevices: true,
+      filters: [
+        {services: [serviceUUID]},
+      ],
       optionalServices: [serviceUUID, writeUUID, notifyUUID]
     };
     console.log('Requesting Bluetooth Device...');
@@ -56,42 +59,6 @@ async function connect() {
   } catch (err) {
     console.log(err.message);
   }
-  // return new Promise((res, rej) => {
-  //   navigator.bluetooth.requestDevice({
-  //         filters: [
-  //           {services: [service]}
-  //         ],
-  //         allowedServices:all,
-  //      //   optionalServices: [service,write,notify]
-  //     })
-  //     .then(device => {
-  //       myDevice = device;
-  //       return device.gatt.connect();
-  //     })
-  //     .then(server => {
-  //       return server.getPrimaryServices();
-  //     })
-  //     .then(servers => {
-  //       console.log(servers);
-  //     })
-  //     .then(server => server.getPrimaryService(service))
-  //     //.then(service => delay(1500).then(()=>service.getCharacteristics()))
-  //     .then(service => service.getCharacteristics())
-  //     .then(s=>{
-  //       console.log(s);
-  //     // .then(service => service.getCharacteristic(transmit))
-  //     // .then(characteristic => {
-  //     // //   myChar = characteristic;
-  //       outputChar = s[0];
-  //       return s[1].startNotifications().then(characteristic => {
-  //         characteristic.addEventListener('characteristicvaluechanged',
-  //                                         handleCharacteristicValueChanged);
-  //         console.log('Notifications have been started.');
-  //       })
-  //     }).catch(err=>{
-  //        console.log(err.message);
-  //     })
-  // });
 }
 
 function disconnect() {
