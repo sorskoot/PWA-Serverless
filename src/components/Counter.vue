@@ -8,7 +8,6 @@
     </div>
     <div>
       <ps-button v-on:click="connect">{{isConnected?"Disconnect":"Connect"}}</ps-button>
-      <!-- <ps-button v-on:click="test">Test</ps-button> -->
     </div>
   </div>
 </template>
@@ -18,7 +17,7 @@ import psButton from "./atoms/button";
 import { bluetoothService } from "../services";
 import { scoreService } from "../services";
 
-let matchId = ~(Math.random()*1000);
+let matchId = ~~(Math.random()*1000);
 
 export default {
   name: "counter",

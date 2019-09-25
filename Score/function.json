@@ -22,14 +22,6 @@
       "tableName": "Scores",
       "take": "500",
       "connection": "dotnetconfpwaserverless_STORAGE"
-    },
-    {
-      "type": "table",
-      "direction": "out",
-      "partitionKey": "scores",
-      "name": "outputTable",
-      "tableName": "Scores",
-      "connection": "dotnetconfpwaserverless_STORAGE"
     }
   ]
 }
