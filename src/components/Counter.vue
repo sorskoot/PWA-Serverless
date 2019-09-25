@@ -18,6 +18,8 @@ import psButton from "./atoms/button";
 import { bluetoothService } from "../services";
 import { scoreService } from "../services";
 
+let matchId = ~(Math.random()*1000);
+
 export default {
   name: "counter",
   components: { psButton },
@@ -42,7 +44,7 @@ export default {
       this.score--;
       scoreService
         .postScore({
-          matchId: 124,
+          matchId: matchId,
           score: `${this.score}`,
           date: "09-25-2019"
         })
@@ -52,7 +54,7 @@ export default {
       this.score++;
       scoreService
         .postScore({
-          matchId: 124,
+          matchId: matchId,
           score: `${this.score}`,
           date: "09-25-2019"
         })
