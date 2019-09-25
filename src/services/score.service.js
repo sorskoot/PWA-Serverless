@@ -31,8 +31,8 @@ function getList() {
 }
 
 function postScore(score) {
-    //return StoreInDB(score);
-    return SendToAzure(score);
+    return StoreInDB(score);
+    //return SendToAzure(score);
 }
 
 function SendToAzure(score) {
@@ -43,17 +43,14 @@ function SendToAzure(score) {
             'Access-Control-Allow-Origin': '*',
             'Content-Type': 'application/json'
         },
-        body: JSON.stringify([score])
-    })
-        .then(response => {
-            return response.json();
-        });
+        body: JSON.stringify(score)
+    }).then(response=>{return `Done sending to azure 🌥. ${response}`})
 }
 
 function StoreInDB(score) {
-    score.matchId = '264';
-    score.date = '05-20-2019';
-    score.partitionKey = `demo`;
+    // score.matchId = '264';
+    // score.date = '05-20-2019';
+    // score.partitionKey = `demo`;
     score.createdAt = `${new Date()}`;
     return scoreDb.then(db => {
         const transaction = db.transaction('scoreFiles', 'readwrite');
@@ -62,5 +59,6 @@ function StoreInDB(score) {
     }).then(() => {
         let event = new Event('saveData');
         document.body.dispatchEvent(event);
+        return 'Stored in IndexDb. ✔'
     });
 }

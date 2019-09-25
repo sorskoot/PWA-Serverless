@@ -2,7 +2,8 @@
 const CACHE = 'PWA-Serverless-cache';
 const precacheCustom = ['https://fonts.googleapis.com/css?family=Orbitron'];
 
-const AzureURL = 'https://fa-d-progressive-01.azurewebsites.net/api/SaveNoSQLFunction_HttpStart?code=SYMEa4nAOnjS6wfQBu9Zj74YJwQyn5b5g1auhHMEgfXFfMbZ9RRdgQ==';
+const AzureURL = 
+'https://dotnetconf-pwa-serverless.azurewebsites.net/api/Score';
 //'https://pwaserverless.azurewebsites.net/api/GetScores';
 
 self.importScripts('vendor/idb.js')

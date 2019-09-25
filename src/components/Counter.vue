@@ -29,10 +29,10 @@ export default {
   },
   methods: {
     connect() {
-      bluetoothService.connect().then(e =>{
-          e.onScore = () => {
-              this.plus();
-          }
+      bluetoothService.connect().then(e => {
+        e.onScore = () => {
+          this.plus();
+        };
       });
     },
     test() {
@@ -42,16 +42,20 @@ export default {
       this.score--;
       scoreService
         .postScore({
-          "total-score": this.score,
-          score: -1,
-          name: "Just a Name"
+          matchId: 124,
+          score: `${this.score}`,
+          date: "09-25-2019"
         })
         .then(e => console.log(e));
     },
     plus() {
       this.score++;
       scoreService
-        .postScore({ 'totalScore': `${this.score}`, score: `1`, name: "Techorama" })
+        .postScore({
+          matchId: 124,
+          score: `${this.score}`,
+          date: "09-25-2019"
+        })
         .then(e => console.log(e));
     }
   }
