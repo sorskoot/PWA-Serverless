@@ -1,0 +1,51 @@
+
+Functions:
+    Create a function:
+        ☐ Open an empty folder in VSCode
+        ☐ Go to Azure Extention in VSCode
+        ☐ Create new project 
+            => PWA-Serveless
+            => JavaScript
+            => HTTP Trigger
+        ☐ To test, add `--port 1234` to Lauch.json and Task.json
+        ☐ Demo and debug
+
+Storage:
+    ☐ New account
+        ☐ Create Storage account
+            => Give it a name
+            => New Resource
+            => Same name
+            => West Europe
+        ☐ Create Table
+            => name it Scores
+        ☐ Create Binding
+            => in
+            => inTable (default)
+            => Scores
+            => Select the storage
+
+        ☐ Draw the owl
+            => show the final function
+
+
+    ☐ Website
+        ☐ configure Static Website on Storage account
+        ☐ Add dist folder to project
+        ☐ add index.html
+            ==> Add some stuff to that
+        ☐ deploy to Azure
+
+Website:
+    ☐ Show it running
+    ☐ Show code
+    ☐ Run it offline
+
+    ☐ Uncomment code
+        => score.service.js
+        => sw.js
+        => registerServiceWorker.js
+        => Update/refresh serviceworker
+
+    ☐ Show offline again
+

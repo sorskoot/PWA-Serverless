@@ -21,6 +21,7 @@
       "name": "inputTable",
       "tableName": "Scores",
       "take": "500",
+      
       "connection": "dotnetconfpwaserverless_STORAGE"
     }
   ]

@@ -4,7 +4,6 @@ const precacheCustom = ['https://fonts.googleapis.com/css?family=Orbitron'];
 
 const AzureURL = 
 'https://dotnetconf-pwa-serverless.azurewebsites.net/api/Score';
-//'https://pwaserverless.azurewebsites.net/api/GetScores';
 
 self.importScripts('vendor/idb.js')
 
@@ -97,10 +96,10 @@ function fromCache(request) {
     });
 }
 
-self.addEventListener('sync', function (event) {
-    if (event.tag == 'syncToAzure') {
-        event.waitUntil(persistLocalChanges());
-    }
-});
+// self.addEventListener('sync', function (event) {
+//     if (event.tag == 'syncToAzure') {
+//         event.waitUntil(persistLocalChanges());
+//     }
+// });
 
  

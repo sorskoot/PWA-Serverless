@@ -31,8 +31,8 @@ function getList() {
 }
 
 function postScore(score) {
-    return StoreInDB(score);
-    //return SendToAzure(score);
+    //return StoreInDB(score);
+    return SendToAzure(score);
 }
 
 function SendToAzure(score) {
@@ -48,9 +48,6 @@ function SendToAzure(score) {
 }
 
 function StoreInDB(score) {
-    // score.matchId = '264';
-    // score.date = '05-20-2019';
-    // score.partitionKey = `demo`;
     score.createdAt = `${new Date()}`;
     return scoreDb.then(db => {
         const transaction = db.transaction('scoreFiles', 'readwrite');
